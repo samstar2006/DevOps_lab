@@ -112,8 +112,9 @@
 
 // }
 
+
+
 pipeline {
-    // Directives
     agent any
     tools {
         maven 'maven'
@@ -125,27 +126,32 @@ pipeline {
         GroupId = readMavenPom().getGroupId()
     }
     stages {
-        // Stage 1: Build
+        stage('Setup Env') {
+            steps {
+                script {
+                    env.ARTIFACT_ID = sh(script: 'mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.artifactId -q -DforceStdout', returnStdout: true).trim()
+                    env.VERSION = sh(script: 'mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.version -q -DforceStdout', returnStdout: true).trim()
+                    env.NAME = sh(script: 'mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.name -q -DforceStdout', returnStdout: true).trim()
+                    env.GROUP_ID = sh(script: 'mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.groupId -q -DforceStdout', returnStdout: true).trim()
+                }
+            }
+        }
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn clean install package'
             }
         }
-
-        // Stage 2: Testing
         stage('Test') {
             steps {
-                sh 'mvn test'
+                echo 'Testing...'
             }
         }
-
-        // Stage 3: Print some information
-        stage('Print Environment variables') {
+        stage('Print Environment Variables') {
             steps {
-                echo "Artifact ID is '${ArtifactId}'"
-                echo "Version is '${Version}'"
-                echo "GroupID is '${GroupId}'"
-                echo "Name is '${Name}'"
+                echo "Artifact ID is '${env.ARTIFACT_ID}'"
+                echo "Version is '${env.VERSION}'"
+                echo "GroupID is '${env.GROUP_ID}'"
+                echo "Name is '${env.NAME}'"
             }
         }
     }
