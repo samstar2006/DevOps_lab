@@ -2,6 +2,6 @@
 
 git status
 git add .
-git commit -m "fixed stage one and two"
+git commit -m "updated pox scm to pull every hour "
 git push 
 git status

@@ -1,3 +1,5 @@
+// worked for pipelinejob//
+
 pipeline {
     //Directives
     agent any
@@ -26,3 +28,5 @@ pipeline {
         }
     }
 }
+
+// worked for pipepile//
