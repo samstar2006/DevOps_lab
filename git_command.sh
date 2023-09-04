@@ -2,6 +2,6 @@
 
 git status
 git add .
-git commit -m "comment out stage 3 to 6 II"
+git commit -m "fixed stage one and two"
 git push 
 git status
