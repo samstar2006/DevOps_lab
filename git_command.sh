@@ -2,6 +2,6 @@
 
 git status
 git add .
-git commit -m "changed maven to Maven"
+git commit -m "go back to previous jenkinsfile and updated maven to Maven"
 git push 
 git status
