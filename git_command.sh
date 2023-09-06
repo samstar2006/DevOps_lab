@@ -2,6 +2,6 @@
 
 git status
 git add .
-git commit -m "updated pox scm to pull every hour "
+git commit -m "new snapshot version for nexus publish "
 git push 
 git status
