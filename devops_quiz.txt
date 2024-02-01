@@ -1,0 +1,22 @@
+Question 1: Which tool will you select as heart of your continuous integration ?  Jenkins
+Question 2: Which tool is used for version control (VCS)? Git
+Question 3: Which tool is used for source code management (SCM) ? Github
+Question 4: What is the purpose of using Maven ? Maven is build automation tool used primarily for java projects. Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages
+Question 5: wWhich tool do you use to store your maven build artifacts ? Nexus is a repository manager. It allows you to proxy, collect, and manage your dependencies so that you are not constantly juggling a collection of JARs. It makes it easy to distribute your software. Internally, you configure your build to publish artifacts to Nexus and they then become available to other developers.
+Question 6: Ansible is used for Provisioning, Application Deployment, Configuration Management and Continuous Delivery. Yes. Ansible can be used for all of the below purposes. But, it is popular for configuration management. Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating system kernel and therefore use fewer resources than virtual machines.
+Question 7: Docker is used to deliver software in packages called containers.
+Question 8: Apache Tomcat is an open source application server that executes Java Servlets, renders and delivers web pages that include JavaServer Page code, and serves Java Enterprise Edition (Java EE) applications.
+Question 9: Terraform is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure.
+Question 10: I can install maven extensions in Jenkins to support building my maven based project. Yes. you can install maven extension which supports maven build. Even though Jenkins provides natively a Maven builder to use a build step in classical Jenkins jobs (freestyle etc) this maven plugin provides a more advanced integration.
+Question 11: Which plugin do you install on Jenkins to publish artifacts to Sonatype Nexus ? Nexus Artifact Uploader
+Question 12: Which plugin provides a deep integration of Jenkins and Maven ? Maven integration Plugin
+Question 13: Git plugin integrates Git with Jenkins. information alert Yes, Git plugin integrates Git with Jenkins. You install this plugin on Jenkins (this is auto installed if you select install recommended plugins when you first setup Jenkins)
+Question 14: I can use "Publish Over SSH" plugin within Jenkins to invoke ansible playbook using "Exec command". Yes. You can use this plugin and the option "Exec command" where you can write command to invoke your ansible playbook.
+Question 15: How do you install plugins on Jenkins ? By navigating to jenkins dashboard > Manage jenkins > Mange plugins
+Question 16: Phing" is a build tool used for php projects. Yes ! Phing is a PHP project build system or build tool based on Apache Ant.
+Question 17: Gradle is a build tool which supports languages like Java (Kotlin, Groovy, Scala), C/C++, and JavaScript. Yes ! Gradle is a build automation tool for multi-language software development. It controls the development process in the tasks of compilation and packaging to testing, deployment, and publishing. Supported languages include Java (Kotlin, Groovy, Scala), C/C++, and JavaScript.
+Question 18: Handy to know !! Mark true or false : CircleCI is one of the fastest CI/CD platform available. Yes !! It is a handy information ! It can be used as a replacement to Jenkins.
+Question 19: Out of the box ! Select the relevant tools which can be used in AWS code pipeline. Amazon S3, AWS Code Commit, and AWS Code Deploy
+Correct !! Continuous delivery usually means a developer’s changes to an application are automatically bug tested and uploaded to a repository (like GitHub or a container registry), where they can then be deployed to a live production environment by the operations team. Whereas, Continuous deployment (the other possible "CD") can refer to automatically releasing a developer’s changes from the repository to production, where it is usable by customers.
+Plan, code, build, test, realse, deploy, operate, and monitor
+517

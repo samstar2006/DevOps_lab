@@ -1,0 +1,74 @@
+****** CLONE THE REPOSITORY FROM GITHUB (FOR PROJECT) ***************************
+
+Please follow the below steps -
+
+1. Create a new folder in your local computer (say for example 'Temp')
+2. Right click on the folder and click on "Git Bash Here".
+3. Type the below commands (the commands are after $ symbol below)
+
+a)
+$ git init
+Initialized empty Git repository in ..
+
+If you have issues, I mean if git is asking to setup information about you then follow;
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email youremail@domain.com
+
+else skip the above 2 commands and continue ...
+
+b)
+
+$ git clone https://github.com/vinaysdevopslab/MyLab.git
+....
+....
+Resolving deltas: 100% (39/39), done.
+
+c) Now double click and open the folder "Temp" -> Delete the ".git" folder
+  -> Double click on "MyLab" folder -> Delete the .git folder
+
+d) Close the GitBash terminal.
+
+e) Now copy "MyLab" folder to drive of your choice. say for example
+   C:\ drive so now the location of local repo is C:\MyLab
+   *** double check the contents of your folder. It should be;
+   C:\MyLab -> src(folder),pom.xml,README.md -> double click on src(folder) -> double click on "main" folder
+   -> double click on "webapp" folder -> you should see css(folder),WEB-INF(folder) and index.jsp
+
+f) Delete the Temp folder.
+
+
+******** FOLLOW THE BELOW STEPS TO PUSH YOUR LOCAL REPO TO YOUR GITHUB REPO *********
+
+g) Rightclick on "C:\MyLab" folder and click on 'Git Bash Here' to open the terminal
+   type the below commands
+
+   $ git init
+     Initialized empty Git repository in
+
+   Login to you GitHub account and click on the "MyLab" repository we have created as per previous video.
+   follow the instructions. they should resemble the below steps.
+
+   $ git status
+     On branch master
+     No commits yet
+     Untracked files:
+     (use "git add <file>..." to include in what will be committed)
+        README.md
+        pom.xml
+        src/
+     nothing added to commit but untracked files present (use "git add" to track)
+
+   $ git add .
+
+   $ git commit -m "first commit"
+
+   $ git remote add origin https://github.com/xxxxx/MyLab.git (make sure you use the valid URL here which you can get from 
+        your GitHub account under your repository)
+
+   $ git push -u origin master
+   
+Now login to GitHub and refresh the repo "MyLab" , you should be able to see the source code (project files).
+
+
+

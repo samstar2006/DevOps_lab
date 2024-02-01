@@ -1,0 +1,29 @@
+# misc
+*.pem
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+**/*.tfstate
+**/*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ansible
+*.retry
+
+*PX*
+''$'\001''PX@'$'\240\003\002''@8'
+
+#git push file
+github_push_script.sh
+
+#ansible ad-hoc commands
+ansible-ad-hoc-commands.sh
+
+.vscode
+```
+.txt*
+
